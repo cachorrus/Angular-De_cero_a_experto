@@ -40,7 +40,7 @@ Agregar las variables de entorno en los archivos
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `production` | `boolean` | **Required**. true para el ambiente de produccion |
-| `api_key` | `string` | **Required**. GIPHY API Key. |
+| `apikey` | `string` | **Required**. GIPHY API Key. |
 
 Ejemplo de archivo environment.ts
 
