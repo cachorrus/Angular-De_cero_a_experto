@@ -42,6 +42,15 @@ Agregar las variables de entorno en los archivos
 | `production` | `boolean` | **Required**. true para el ambiente de produccion |
 | `api_key` | `string` | **Required**. GIPHY API Key. |
 
+Ejemplo de archivo environment.ts
+
+```
+export const environment = {
+    production: true,
+    apikey: 'GIPHY_API_KEY'
+};
+```
+
 ## Tools 
 
 - [Bootstrap](https://getbootstrap.com/): Build fast, responsive sites with Bootstrap 
