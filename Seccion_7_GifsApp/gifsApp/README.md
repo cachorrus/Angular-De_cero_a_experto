@@ -49,3 +49,18 @@ Agregar las variables de entorno en los archivos
 - [Quicktype](https://quicktype.io/): Convert JSON into gorgeous, typesafe code in any language.
 - [animate.css](https://animate.style/): Animate.css is a library of ready-to-use, cross-browser animations for use in your web projects. Great for emphasis, home pages, sliders, and attention-guiding hints.
 
+## GifsApp - Aplicación para buscar imágenes
+
+¿Qué veremos en esta sección?
+La sección contendrá nuestra primera aplicación real de Angular, este es un breve listado de los temas fundamentales:
+
+- Modularización de la aplicación
+- Estructura de la aplicación de media a gran escapa
+- Componentes
+- ViewChild
+- Servicios
+- Historial de búsquedas
+- Uso de Api Keys
+- LocalStorage
+- Peticiones HTTP
+- Animaciones mediante css

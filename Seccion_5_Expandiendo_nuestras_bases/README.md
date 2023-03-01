@@ -30,7 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 - https://steffodimfelt.medium.com/add-eslint-and-prettier-to-angular-6d475cfcc823
 
-## Introducción a Agnular: Extendiendo nuestras bases (continuación)
+## Introducción a Angular: Extendiendo nuestras bases (continuación)
 
 ¿Qué veremos en esta sección?
 Una vez sentadas las bases de Angular en la sección anterior, vamos a seguir expandiéndolas aquí, con los siguientes temas:
