@@ -47,3 +47,8 @@ Este es un breve listado de los temas fundamentales:
 - Y más
 
 En esta sección daremos los fundamentos de una aplicación [SPA](https://angular.io/guide/router-tutorial#using-angular-routes-in-a-single-page-application) (Single Page Application), y luego, las seguiremos haciendo pero mediante carga perezosa (lazyload), esta es otra aplicación real que nos enseñara mucho de cómo funciona Angular y como la información fluye en ella.
+
+## Tools
+
+- [REST COUNTRIES](https://restcountries.com/): Get information about countries via a RESTful API (v3.1).
+- [quicktype](https://quicktype.io/): Convert JSON into gorgeous, typesafe code in any language.
