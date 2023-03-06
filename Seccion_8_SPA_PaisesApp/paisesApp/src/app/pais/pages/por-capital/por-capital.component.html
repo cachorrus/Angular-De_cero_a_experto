@@ -1,23 +1,47 @@
-<p>Por Capital</p>
-<hr>
-<div class="row">
-    <div class="col">
-        <app-pais-input
-            (onEnter)="buscar($event)"
-            placeholder="Buscar Capital..."
-        >        
-        </app-pais-input>
+<div class="animate__animated animate__fadeIn animate__faster">
+    <h3>Por Capital</h3>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <app-pais-input 
+                (onEnter)="buscar($event)"
+                (onDebounce)="sugerencia($event)" 
+                placeholder="Buscar Capital...">
+            </app-pais-input>
+        </div>
     </div>
-</div>
 
-<hr>
+    <ul *ngIf="mostrarSugerencias"
+        class="list-group">
+        <li *ngFor="let pais of paisesSugerido;"
+            role="button" 
+            class="list-group-item list-group-item-action">                        
+            <div class="row">
+                <img class="col-6 small-flag" [src]="pais.flags.png" alt="">
+                <a class="col-6 nav-link"
+                    [routerLink]="['/pais',pais.cca2]">
+                    {{pais.capital}}
+                </a>
+            </div>             
+        </li>
+        <li (click)="buscar(termino)"
+            role="button" 
+            class="list-group-item list-group-item-action">                        
+            <a class="nav-link badge rounded-pill text-bg-info">
+                Buscar "{{termino}}"
+            </a>             
+        </li>
+    </ul>
 
-<div *ngIf="hayError" class="alert alert-danger">
-    No se encontró nada con el término {{termino}}
-</div>
+    <hr>
 
-<div *ngIf="paises.length > 0" class="row">
-    <div class="col">
-        <app-pais-tabla [paises]="paises"></app-pais-tabla>
+    <div *ngIf="hayError" class="alert alert-danger">
+        No se encontró nada con el término {{termino}}
+    </div>
+
+    <div *ngIf="paises.length > 0" class="row">
+        <div class="col">
+            <app-pais-tabla [paises]="paises"></app-pais-tabla>
+        </div>
     </div>
 </div>

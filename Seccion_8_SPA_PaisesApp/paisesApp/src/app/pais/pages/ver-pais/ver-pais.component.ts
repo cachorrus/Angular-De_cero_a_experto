@@ -36,7 +36,7 @@ export class VerPaisComponent implements OnInit {
     this.activateRoute.params
       .pipe(
         switchMap( ({codigoPais}) => this.paisService.getPaisPorAlpha(codigoPais)),
-        tap(console.log) // es igal a resp => consola.log(resp) imprime el resultado de getPaisPorAlpha
+        //tap(console.log) // es igal a resp => consola.log(resp) imprime el resultado de getPaisPorAlpha
       )
       .subscribe(paises => {
         this.paises = paises;

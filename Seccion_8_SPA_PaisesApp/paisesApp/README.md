@@ -26,11 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Tools
-
-- [REST COUNTRIES](https://restcountries.com/): Get information about countries via a RESTful API
-
-## SPA - PaisesApp
+## Sección 8: SPA - PaisesApp
 
 ¿Qué veremos en esta sección?
 Este es un breve listado de los temas fundamentales:
@@ -48,7 +44,19 @@ Este es un breve listado de los temas fundamentales:
 
 En esta sección daremos los fundamentos de una aplicación [SPA](https://angular.io/guide/router-tutorial#using-angular-routes-in-a-single-page-application) (Single Page Application), y luego, las seguiremos haciendo pero mediante carga perezosa (lazyload), esta es otra aplicación real que nos enseñara mucho de cómo funciona Angular y como la información fluye en ella.
 
+## Sección 9: Continuación aplicación de Países - Sugerencias, debounce y más
+
+¿Qué veremos en esta sección?
+Aquí continuaremos la aplicación de países, pero enfocados en la parte de las sugerencias y auto-completado, este es un breve listado de los temas fundamentales:
+
+- ngClass y diferentes formas de manipular clases
+- CSS condicionales
+- Optimizaciones a peticiones HTTP
+- Animaciones de CSS
+- Auto-completado en la búsqueda de países
+
 ## Tools
 
 - [REST COUNTRIES](https://restcountries.com/): Get information about countries via a RESTful API (v3.1).
 - [quicktype](https://quicktype.io/): Convert JSON into gorgeous, typesafe code in any language.
+-[Animate.css](https://animate.style/): is a library of ready-to-use, cross-browser animations for use in your web projects. Great for emphasis, home pages, sliders, and attention-guiding hints.
