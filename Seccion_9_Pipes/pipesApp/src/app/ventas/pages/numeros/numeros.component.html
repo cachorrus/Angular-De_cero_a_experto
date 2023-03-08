@@ -1,0 +1,117 @@
+<h1>Números</h1>
+<div>
+    <p>Pipes incluidos en Angular - Usualmente en el CommonModule.</p>
+    <p><strong>DecimalPipe:</strong> Formats a value according to digit options 
+        and locale rules. Locale determines group sizing and 
+        separator, decimal point character, and other 
+        locale-specific configurations. 
+    </p>
+    <p><strong>PercentPipe:</strong> Transforms a number to a 
+        percentage string, formatted according to locale rules 
+        that determine group sizing and separator, decimal-point 
+        character, and other locale-specific configurations.
+    </p>
+    <p><strong>CurrencyPipe:</strong> Transforms a number to a 
+        currency string, formatted according to locale rules 
+        that determine group sizing and separator, decimal-point 
+        character, and other locale-specific configurations.
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card 
+            header="DecimalPipe"
+            [subheader]="ventasNetas.toString()">
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                        number
+                        </span> =>            
+                    <i class="pi pi-dollar"></i>
+                    {{ventasNetas | number}}            
+            </div>
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                        number: '1.2-2'
+                        </span> =>            
+                    <i class="pi pi-dollar"></i>
+                    {{ventasNetas | number: '1.2-2'}}
+            </div>
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                        number: '1.2-3': 'fr'
+                        </span> =>            
+                    <i class="pi pi-dollar"></i>
+                    {{ventasNetas | number: '1.2-3': 'fr'}}
+            </div>
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                        number: '1.1-2': 'nl'
+                        </span> =>            
+                    <i class="pi pi-dollar"></i>
+                    {{ventasNetas | number: '1.1-2': 'nl'}}
+            </div>
+        </p-card>
+    </div>    
+    <div class="col-4">
+        <p-card 
+            header="PercentPipe"
+            [subheader]="porcentaje.toString()">
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                    percent
+                        </span> =>            
+                    {{porcentaje | percent}}            
+            </div>
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                    percent: '1.2-2'
+                        </span> =>            
+                    {{porcentaje | percent: '1.2-2'}}
+            </div>
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                    percent: '1.2-3': 'fr'
+                        </span> =>            
+                    {{porcentaje | percent: '1.2-3': 'fr'}}
+            </div>
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                        number: '1.1-2': 'nl'
+                        </span> =>            
+                    {{porcentaje | percent: '1.1-2': 'nl'}}
+            </div>
+        </p-card>
+    </div>    
+    <div class="col-4">
+        <p-card 
+            header="CurrencyPipe"
+            [subheader]="ventasNetas.toString()">
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                    currency
+                        </span> =>            
+                    {{ventasNetas | currency}}            
+            </div>
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                    currency:'EUR':'symbol-narrow':'1.4-4':'nl'
+                        </span> =>            
+                    {{ventasNetas | currency:'EUR':'symbol-narrow':'1.4-4':'nl'}}
+            </div>            
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                    currency:'INR':'symbol-narrow':'4.2-2'
+                        </span> =>            
+                    {{ventasNetas | currency:'INR':'symbol-narrow':'1.2-2'}}                    
+            </div>
+            <div>
+                numero | <span class="font-bold text-orange-500">
+                    currency:'CAD':'symbol':'1.2-2':'fr'
+                        </span> =>            
+                    {{ventasNetas | currency:'CAD':'symbol':'1.2-2':'fr'}}
+            </div>
+            
+        </p-card>
+    </div>    
+</div>

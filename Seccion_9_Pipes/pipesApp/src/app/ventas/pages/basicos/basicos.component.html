@@ -1,0 +1,82 @@
+<h1>Pipes Básicos</h1>
+<p>
+    Pipes incluidos en Angular - Usualmente en el CommonModule
+</p>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card 
+            header="uppercase"
+            [subheader]="nombreLowercase">
+            <span class="font-bold text-orange-500">
+                {{nombreLowercase | uppercase}}
+            </span>
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card 
+            header="lowercase"
+            [subheader]="nombreUppercase">
+            <span class="font-bold text-orange-500">
+                {{nombreUppercase | lowercase}}
+            </span>
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card 
+            header="titlecase"
+            [subheader]="nombreTitlecase">
+            <span class="font-bold text-orange-500">
+                {{nombreTitlecase | titlecase}}
+            </span>
+        </p-card>
+    </div>
+</div>
+
+<h1>Date | Fecha | Pipe</h1>
+<p>
+    Formats a date value according to locale rules.
+</p>
+<div class="grid">
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li>fecha (default)</li>
+                <li>fecha | <span class="font-bold text-orange-500">date</span></li>
+                <li>fecha | <span class="font-bold text-orange-500">date:'short'</span></li>
+                <li>fecha | <span class="font-bold text-orange-500">date:'long'</span></li>
+                <li>fecha | <span class="font-bold text-orange-500">date:'YYYY-MMMM-dd h:mm a EEEE'</span></li>
+            </ul>
+            <hr>
+            <ul>
+                <li>fecha | <span class="text-orange-500">date:'long': 'GMT-5'</span></li>
+                <li>fecha | <span class="text-orange-500">date:'long': 'GMT-4': 'en'</span></li>
+                <li>fecha | <span class="text-orange-500">date:'long': 'GMT-4': 'fr'</span></li>
+                <li>fecha | <span class="text-orange-500">date:'long': 'GMT-4': 'zh'</span></li>
+                <li>fecha | <span class="text-orange-500">date:'long': 'GMT-4': 'nl'</span></li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li>{{fecha}}</li>
+                <li>{{fecha | date}}</li>
+                <li>{{fecha | date:'short'}}</li>
+                <li>{{fecha | date:'long'}}</li>
+                <li>{{fecha | date:'YYYY-MMMM-dd h:mm a EEEE'}}</li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li>{{fecha | date:'long': 'GMT-5'}}</li>
+                <li>{{fecha | date:'long': 'GMT-4': 'en'}}</li>
+                <li>{{fecha | date:'long': 'GMT-4': 'fr'}}</li>
+                <li>{{fecha | date:'long': 'GMT-4': 'zh'}}</li>
+                <li>{{fecha | date:'long': 'GMT-4': 'nl'}}</li>
+            </ul>
+        </p-card>
+    </div>
+</div>
+
+{{45435.435 | number}}

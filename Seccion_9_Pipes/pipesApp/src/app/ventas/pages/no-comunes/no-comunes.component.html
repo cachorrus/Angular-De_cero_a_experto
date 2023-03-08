@@ -1,0 +1,102 @@
+<h1>Pipes no tan comunes</h1>
+<p>
+    Pipes incluidos en Angular - Usualmente en el CommonModule
+</p>
+<!-- Mensages toast -->
+<p-toast></p-toast>
+
+<div class="grid">
+    <div class="col md:col-6 sm:col-9">
+        <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+            <p>
+                Saludos {{nombre}}, es un placer 
+                {{genero | i18nSelect: invitacionMap}} 
+                a nuestro evento.
+            </p>
+            <button pButton type="button" 
+                label="Cambiar Cliente" 
+                class="p-button-rounded p-button-outlined p-button-warning"
+                (click)="onCambiarNombre()">
+            </button>
+        </p-fieldset> 
+    </div>
+
+    <div class="col md:col-6 sm:col-9">        
+        <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+            <p>
+                Actualmente {{clientes.length | i18nPlural:clientesMap}}
+            </p>
+            <p-button label="Borrar Cliente" 
+                (onClick)="onBorrarCliente()"
+                styleClass="p-button-rounded p-button-outlined p-button-danger">
+            </p-button>            
+
+            <button pButton pRipple 
+                (click)="onResetClientes()"
+                type="button" 
+                icon="pi pi-refresh"
+                pTooltip="Inicializar clientes"
+                class="p-button-rounded ml-2">
+            </button>
+
+        </p-fieldset>                 
+    </div>
+
+    <div class="col md:col-6 sm:col-9">        
+        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+            <b>Original</b>            
+            <pre>{{resetClientes}}</pre>     
+            
+            <b class="font-bold text-orange-500">slice:0:2</b>
+            <pre>{{resetClientes | slice:0:2}}</pre>
+
+            <b class="font-bold text-orange-500">slice:1:2</b>
+            <pre>{{resetClientes | slice:1:2}}</pre>
+
+            <b class="font-bold text-orange-500">slice:1:3</b>
+            <pre>{{resetClientes | slice:1:3}}</pre>
+
+            <b class="font-bold text-orange-500">slice:3:3</b>
+            <pre>{{resetClientes | slice:3:3}}</pre>
+
+            <hr>
+            <b class="font-bold text-orange-500">*ngFor="let i of Collection | slice:1:4"</b>
+            <pre *ngFor="let i of resetClientes | slice:1:4">{{i}}</pre>
+
+        </p-fieldset>                 
+    </div>
+    
+    <div class="col md:col-6 sm:col-9"> 
+        <div class="grid">    
+            <div class="col-12">   
+                <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+                    <ul>
+                        <li *ngFor="let item of Persona | keyvalue">
+                            <b>{{item.key}}:</b> {{item.value}}
+                        </li>
+                    </ul>
+                </p-fieldset>             
+            
+                <div class="col-12">        
+                    <p-fieldset legend="Json Pipe" [toggleable]="true">
+                        <pre>{{heroes | json}}</pre>
+                    </p-fieldset>                 
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="col md:col-6 sm:col-9">        
+        <p-fieldset legend="Async Pipe" [toggleable]="true">
+            <b>Con Observable</b>
+            <pre *ngIf="!(miObservable | async); else elseTemplate">Resolviendo observable...</pre>
+            <ng-template #elseTemplate>
+                <pre>{{miObservable | async}}</pre>
+            </ng-template>
+            
+            <b>Con Promise</b>
+            <pre *ngIf="!(valorPromesa | async)">Resolviendo promesa...</pre>
+            {{valorPromesa | async}}
+        </p-fieldset>                 
+    </div>
+</div>
