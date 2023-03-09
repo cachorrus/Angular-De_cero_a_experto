@@ -55,3 +55,11 @@ PrimeNG es un paquete de componentes estilizados que contienen funcionalidades b
 
 Recuerden que PrimeNG no es el único, hay muchos pero la mayoría funcionan de formas similares, importando módulos, por eso mi objetivo de entrenarlos bastante bien con el manejo de módulos en todo momento para que nos familiaricemos con esta métodología.
 
+## Sección 11: Pipes personalizados
+
+¿Qué veremos en esta sección?
+Este es un breve listado de los temas fundamentales:
+
+- Pipes personalizados
+- Argumentos hacia los Pipes
+- SortableTable manual y usando PrimeNg

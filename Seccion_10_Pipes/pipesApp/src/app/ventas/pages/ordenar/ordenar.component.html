@@ -1,1 +1,100 @@
-<p>ordenar works!</p>
+<h1>Pipes Personalizados</h1>
+<p>
+    Pipes creados por {{'nosotros' | mayusculas:isMayusculas}}
+</p>
+
+<p-toolbar>
+    <div class="p-toolbar-group-start">
+        <pre>es Mayúscula? </pre>
+        <p-selectButton [options]="stateOptions" 
+            styleClass="mr-1"
+            [(ngModel)]="isMayusculas" optionLabel="label" 
+            optionValue="value">
+        </p-selectButton>
+        <button pButton pRipple
+            label="toogle mayúscula"
+            class="mr-1 p-button-warning"
+            (click)="toogleMayuscula()"
+        ></button>
+        <p-toggleButton [(ngModel)]="isMayusculas"
+            styleClass="mr-1"
+            onIcon="{{'pi pi-check'}}" onLabel="{{'En Mayusculas'}}"
+            offIcon="{{'pi pi-times'}}" offLabel="{{'En Minusculas'}}"
+        ></p-toggleButton>  
+    </div>
+    
+    <div class="p-toolbar-group-end">
+             
+    </div>
+</p-toolbar>
+
+<hr>
+
+<p-toolbar styleClass="mt-2">
+    <div class="p-toolbar-group-start">
+    </div>
+    
+    <div class="p-toolbar-group-end">        
+        <i class="pi pi-bars mr-2"></i>
+        <button pButton
+            icon="pi pi-sort"
+            label="Por Nombre"
+            class="mr-1 p-button-danger"
+            (click)="cambiarOrden('nombre')"
+        ></button>     
+        <button pButton
+            icon="pi pi-sort"
+            label="Vuela"
+            class="mr-1 p-button-success"
+            (click)="cambiarOrden('vuela')"
+        ></button>       
+        <button pButton
+            icon="pi pi-sort"
+            label="Por Color"
+            class="mr-1 p-button-info"
+            (click)="cambiarOrden('color')"
+        ></button>       
+    </div>
+</p-toolbar>
+
+<div class="grid mt-2">
+    <div class="col">
+        <p-table [value]="heroes | ordenar:ordenarPor">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Vuela</th>
+                    <th>Color</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-heroe>
+                <tr>
+                    <td>{{heroe.nombre}}</td>
+                    <td>{{heroe.vuela | vuela | titlecase}}</td>
+                    <td>{{heroe.color}} - {{heroe.color | color}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
+
+<div class="grid mt-2">
+    <div class="col">
+        <p-table [value]="heroes | slice:0">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th pSortableColumn="nombre">Nombre <p-sortIcon field="nombre"></p-sortIcon></th>
+                    <th pSortableColumn="vuela">Vuela <p-sortIcon field="vuela"></p-sortIcon></th>
+                    <th pSortableColumn="color">Color <p-sortIcon field="color"></p-sortIcon></th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-heroe>
+                <tr>
+                    <td>{{heroe.nombre}}</td>
+                    <td>{{heroe.vuela | vuela | titlecase}}</td>
+                    <td>{{heroe.color}} - {{heroe.color | color}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

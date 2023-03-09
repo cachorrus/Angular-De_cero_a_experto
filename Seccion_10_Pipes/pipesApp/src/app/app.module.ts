@@ -32,7 +32,7 @@ registerLocaleData(localeEs,'es-MX',localeMXExtra); */
     BrowserAnimationsModule,
     AppRouterModule,
     SharedModule,
-    VentasModule
+    VentasModule    
   ],
   providers: [
     {provide: LOCALE_ID, useValue:'es-MX'} , //Default en-US:  BCP 47 Unicode Common Locale Data Repository (CLDR)
