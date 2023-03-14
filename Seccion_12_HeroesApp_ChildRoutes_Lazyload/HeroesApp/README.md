@@ -76,6 +76,23 @@ Este es un breve listado de los temas fundamentales:
 
 Esta sección les dará las bases para poder realizar CRUD completos hacia cualquier backend basado en servicios web, mediante comunicación JSON
 
+## Sección 15: Protección de rutas
+
+¿Qué veremos en esta sección?
+Este es un breve listado de los temas fundamentales:
+
+- Protección de rutas
+- Rutas privadas
+- Rutas públicas
+- Servicio de autenticación
+- Guards
+- ~~CanActivate~~: 
+- ~~CanLoad~~: This guard has been deprecated in Angular v.15.1 and has been replaced by CanMatch
+- CanMatch: = canLoad + canActivate
+- Mantener la sesión del usuario
+
+Esta es una sección muy importante, donde controlaremos de forma básica una autenticación, mucho más adelante en el curso, realizaremos autenticación mediante JWT, pero antes de llegar a eso que son temas de Backend, necesito que comprendamos cómo Angular nos puede servir para proteger nuestras rutas.
+
 ### Tools
 
 - [Angular Material](https://material.angular.io/): Material Design components for Angular.
