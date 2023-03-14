@@ -59,6 +59,23 @@ Esta sección tiene por objetivo principal aprender a utilizar Angular Material,
 
 En la siguiente sección después de esta, continuaremos la aplicación pero realizaremos un CRUD.
 
+## Sección 14: HeroesApp - CRUD (Continuación con Angular Material)
+
+¿Qué veremos en esta sección?
+Este es un breve listado de los temas fundamentales:
+
+- CRUD
+    - Create
+    - Read
+    - Update
+    - Delete
+- Pipes puros e impuros
+- Snacks
+- Dialogs
+- Inyección de servicios manualmente
+
+Esta sección les dará las bases para poder realizar CRUD completos hacia cualquier backend basado en servicios web, mediante comunicación JSON
+
 ### Tools
 
 - [Angular Material](https://material.angular.io/): Material Design components for Angular.
