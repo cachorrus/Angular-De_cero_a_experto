@@ -2,7 +2,7 @@
 
 <div class="row">
     <div class="col">
-        <form class="mt-2"
+        <form class="mt-2" autocomplete="off"
             #miFormulario="ngForm"
             (ngSubmit)="guardar()"
             >
@@ -13,7 +13,6 @@
                     <input type="text" 
                         class="form-control" 
                         placeholder="Nombre del producto"
-                        autocomplete="off"
                         [ngModel] = "initForm.inputProducto"
                         required 
                         name="inputProducto"
@@ -32,7 +31,6 @@
                     <input type="number" 
                         class="form-control" 
                         placeholder="Precio del producto"
-                        autocomplete="off"
                         [ngModel] = "initForm.inputPrecio"
                         required
                         name="inputPrecio"                       
@@ -51,7 +49,6 @@
                     <input type="number" 
                         class="form-control" 
                         placeholder="Existencias del producto"
-                        autocomplete="off"
                         [ngModel] = "initForm.inputExistencias"
                         required                       
                         name="inputExistencias"

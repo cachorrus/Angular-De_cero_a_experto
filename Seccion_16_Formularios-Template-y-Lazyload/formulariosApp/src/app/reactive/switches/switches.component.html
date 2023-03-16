@@ -1,1 +1,83 @@
-<p>switches works!</p>
+<h2>Template: Switches</h2>
+<hr>
+
+<form [formGroup]="miFormularioSwitches" (ngSubmit)="guardar()">
+    <!-- Radios -->
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Género</label>
+        <div class="col-sm-9">
+            <div class="form-check">
+                <input class="form-check-input" 
+                    type="radio" 
+                    id="radioMasculino"    
+                    formControlName="genero"                 
+                    value="M">
+                <label class="form-check-label" for="radioMasculino">
+                  Masculino
+                </label>
+              </div>
+            <div class="form-check">
+                <input class="form-check-input" 
+                type="radio"  
+                id="radioFemenino"  
+                formControlName="genero"               
+                value="F">
+                <label class="form-check-label" for="radioFemenino">
+                Femenino
+                </label>
+            </div>
+        </div>        
+    </div>
+
+    <!-- Switches -->
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Notificaciones</label>
+        <div class="col-sm-9">
+            <div class="form-check form-switch mt-2">
+                <input class="form-check-input" 
+                    type="checkbox" role="switch"
+                    formControlName="notificaciones"
+                    id="flexSwitchCheckChecked">
+                <label class="form-check-label" for="flexSwitchCheckChecked">
+                    Quiero recibir notificaciones
+                </label>
+              </div>
+        </div>
+    </div>
+
+    <!-- Check -->
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-9">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" 
+                value="" id="flexCheckDefault"                
+                formControlName="condiciones">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Términos y condiciones
+                </label>
+              </div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <button [disabled]="miFormularioSwitches.invalid"
+                    type="submit"
+                    class="btn btn-primary">
+                    Guardar
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<h5>Valor del formulario</h5>
+<pre>{{miFormularioSwitches.value | json}}</pre>
+
+<h5>Persona</h5>
+<pre>{{persona | json}}</pre>
+
+<h5>Formulario Valid</h5>
+<pre>{{miFormularioSwitches.valid}}</pre>
