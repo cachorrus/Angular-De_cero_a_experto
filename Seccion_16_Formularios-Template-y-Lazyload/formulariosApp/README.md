@@ -58,3 +58,19 @@ Este es un breve listado de los temas fundamentales:
 Esta sección continua en la siguiente con más temas relacionados a formularios reactivos, ya que como se podrán imaginar es bastante información que digerir, pero lo importante aquí es que comprendamos que Angular cuenta con varias maneras de manejar formularios.
 
 Muchos me pregunta cuál aproximación prefiero, y son los formularios reactivos, porque siento que tengo mayor control y más fácilmente puedo manipular el formulario, pero los formularios por template sirven mucho cuando son tareas simples o rápidas. Aunque en esos casos, muchas veces prefiero no utilizar formularios por template y simplemente tomo el valor que necesito con referencias locales.
+
+## Sección 18: Formularios: Validaciones manuales y asíncronas
+
+¿Qué veremos en esta sección?
+Este es un breve listado de los temas fundamentales:
+
+- Validaciones manuales
+- Validaciones asíncronas
+- Validar contra expresiones regulares
+- Separar la lógica de validaciones
+- Estado del formulario
+- Mensajes de error personalizados
+
+Más adelante tendremos una sección de directivas, la cual es un excelente complemento para el manejo de errores de formularios reactivos, pero luego llegarán a ella.
+
+Por ahora me interesa que dominemos el flujo de información y validaciones de los formularios reactivos. Recuerden que todo lo que se haga en formularios Reactivos se puede hacer con los formularios por template, pero prefiero enfocar tiempo y esfuerzo en este tipo de formularios reactivos por la facilidad y control.

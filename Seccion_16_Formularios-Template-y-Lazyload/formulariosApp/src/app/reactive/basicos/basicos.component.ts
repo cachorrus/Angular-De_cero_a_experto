@@ -43,7 +43,7 @@ export class BasicosComponent implements OnInit {
     nombre      : [,
                     [
                       Validators.required, 
-                      trimValidator(),
+                      trimValidator,
                       Validators.minLength(3)
                     ]
                   ],

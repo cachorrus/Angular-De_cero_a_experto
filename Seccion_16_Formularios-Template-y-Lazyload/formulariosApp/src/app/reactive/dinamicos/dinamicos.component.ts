@@ -18,18 +18,18 @@ export class DinamicosComponent {
 
   //funcion con todas las validaciones para los inputs del formulario
   private validationInput(): ValidatorFn[]{
-    return [Validators.required, trimValidator()];
+    return [Validators.required, trimValidator];
   }
 
   miFormulario: FormGroup = this.fb.group({
-        nombre    : ['',[Validators.required, trimValidator(), Validators.minLength(3)]],
+        nombre    : ['',[Validators.required, trimValidator, Validators.minLength(3)]],
         favoritos : this.fb.array([
-            ['Metal Gear', this.validationInput()],
-            ['Death Stranding', this.validationInput()]
+            ['Metal Gear', this.validationInput],
+            ['Death Stranding', this.validationInput]
             ], Validators.required) //por lo menos un elemento en el array 
         });
 
-  nuevoFavorito: FormControl = this.fb.control('',this.validationInput());
+  nuevoFavorito: FormControl = this.fb.control('',this.validationInput);
 
   campoEsValido(campo: string) {
     return this.miFormulario.controls[campo]?.touched &&
@@ -66,7 +66,7 @@ export class DinamicosComponent {
     //this.favoritosArr.push(new FormControl(this.nuevoFavorito.value, this.validationInput()));
 
     //agreguar el control con FormArray
-    this.favoritosArr.push(this.fb.control(this.nuevoFavorito.value, this.validationInput()));
+    this.favoritosArr.push(this.fb.control(this.nuevoFavorito.value, this.validationInput));
 
     this.nuevoFavorito.reset();
   }
