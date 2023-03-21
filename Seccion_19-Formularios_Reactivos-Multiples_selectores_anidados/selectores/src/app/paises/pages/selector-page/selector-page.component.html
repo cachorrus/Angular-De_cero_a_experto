@@ -1,0 +1,72 @@
+<h1 class="mt-5">Selectores anidados</h1>
+
+<form [formGroup]="miFormulario" (ngSubmit)="guardar()">
+    <!-- Continentes/Regiones -->
+    <div class="row mb-3">
+        <div class="col">
+            <label for="region" class="form-label">
+                Continente:
+            </label>
+            <select formControlName="region" 
+                name="region" class="form-control">
+                <option value="">-- Seleccione Continente --</option>
+                <option *ngFor="let region of regiones"                    
+                    [value]="region | lowercase">{{region}}</option>
+            </select>
+        </div>        
+    </div>
+
+    <!-- Paises -->
+    <div class="row mb-3" *ngIf="paises.length > 0">
+        <div class="col">
+            <label for="region" class="form-label">
+                Pais:
+            </label>
+            <select formControlName="pais"
+                name="region" class="form-control">
+                <option value="">-- Seleccione Pais --</option>
+                <option *ngFor="let pais of paises"
+                    [value]="pais.cca3">{{pais.name.common}}</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Fronteras -->
+    <div class="row mb-3" *ngIf="fronteras.length>0">
+        <div class="col">
+            <label for="region" class="form-label">
+                Frontera:
+            </label>
+            <select formControlName="frontera"
+                name="region" class="form-control">
+                <option value="">-- Seleccione Frontera --</option>
+              <option *ngFor="let frontera of fronteras"
+                    [value]="frontera.cca3">{{frontera.name.common}}</option> 
+            </select>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="cargando">
+        <div class="col">
+            <div class="alert alert-primary">
+                <div class="d-flex align-items-center">
+                    <strong>Loading...</strong>
+                    <div class="spinner-border ms-auto" role="status" aria-hidden="true"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary float-end"
+                type="submit">
+                Seleccionar
+            </button>
+        </div>
+    </div>
+</form>
+
+<h3>Formulario</h3>
+<pre>Valid: {{miFormulario.valid}}</pre>
+<pre>Value: {{miFormulario.value | json}}</pre>
