@@ -1,0 +1,11 @@
+<h1>Ciclo de vida de angular(Lifecycle hooks)</h1>
+<hr>
+<!-- https://angular.io/guide/lifecycle-hooks -->
+<button (click)="mostrar = !mostrar">
+  {{mostrar ? 'Ocultar' : 'Mostrar'}}
+</button>
+
+<!-- Cuando es ocultado es ejecutado el evento ngOnDestroy 
+  del componente app-pagina1
+-->
+<app-pagina1 *ngIf="mostrar"></app-pagina1>

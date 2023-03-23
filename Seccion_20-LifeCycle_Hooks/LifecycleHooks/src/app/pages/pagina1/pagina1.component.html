@@ -1,0 +1,27 @@
+<p>pagina1 works!: {{nombre}}</p>
+
+<!-- cuando se realiza un cambio del estado del control
+    por ejemplo onblur() o alteracion del valor se ejecutan
+    los eventos: 
+    ngDoCheck, ngAfterContentChecked, ngAfterViewChecked
+-->
+<input type="text" 
+    placeholder="Hola Mundo"
+    [(ngModel)]="nombre">
+
+<!-- cuando se realiza un cambio del estado del control
+    por ejemplo click() se ejecutan los eventos: 
+    ngDoCheck, ngAfterContentChecked, ngAfterViewChecked
+-->
+<button (click)="guardar()">
+    Click
+</button>
+
+<br><br>
+
+<!-- cuando se realiza un cambio del @Input es ejecutado
+    el evento: ngOnChanges del componente app-muestra-nombre 
+-->
+<!-- <app-muestra-nombre [nombre]="nombre"></app-muestra-nombre> -->
+
+<h1>Segundos: {{segundos}}</h1>
