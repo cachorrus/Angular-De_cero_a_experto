@@ -1,0 +1,28 @@
+<div #mapa class="position-absolute vh-100 container-fluid"></div>
+
+<div class="row position-fixed w-25 
+            bottom-0 start-0 m-5 z-3 
+            bg-white rounded">
+    <div class="col-12">
+        <label class="form-label">              
+            Lng,Lat: [{{center[0] | number:'2.0-4'}},{{center[1] | number:'2.0-4'}}]
+        </label>
+        <input type="range" class="form-range"
+        #zoomRange
+        (input)="changedZoom(zoomRange.value)"
+        [value]="zoomLevel" [min]="minZoom" [max]="maxZoom">
+    </div>
+    <div class="col-12 mb-1 text-center">
+        <button class="btn btn-primary float-start"
+            (click)="zoomOut()">
+            -
+        </button>
+        <label class="form-label">
+            Zoom: {{zoomLevel | number:'2.0-2'}}
+        </label>
+        <button class="btn btn-primary float-end"
+            (click)="zoomIn()">
+            +
+        </button>       
+    </div>
+</div>
