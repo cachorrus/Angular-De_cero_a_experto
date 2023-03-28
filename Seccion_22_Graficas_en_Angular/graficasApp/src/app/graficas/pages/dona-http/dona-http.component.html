@@ -1,0 +1,22 @@
+
+<h1 class="text-center">Doughnut-http Chart</h1>
+<hr>  
+<div *ngIf="doughnutChartData.datasets.length === 0; 
+        else divGrafica" 
+    class="alert alert-info"> 
+    cargando data...
+</div>
+<ng-template #divGrafica>
+    <div class="container w-75 d-flex align-items-center justify-content-center">          
+        <canvas baseChart class="chart"
+            [data]="doughnutChartData"
+            [type]="doughnutChartType">
+        </canvas>
+    </div>
+<span  class="float-end text-primary">
+    *Información en billones de usuarios
+</span>
+</ng-template>
+<!-- <div class="container w-75 d-flex align-items-center justify-content-center">      
+</div> -->
+

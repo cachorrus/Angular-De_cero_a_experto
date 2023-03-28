@@ -1,0 +1,17 @@
+<h1 class="text-center">Gráficas Dobles!</h1>
+<hr>
+<div class="row">
+    <div class="col-md-6">
+        <app-grafica-barra [horizontal]="true"
+        [inputBarCharData]="productoData">
+        </app-grafica-barra>
+        <!--  [inputLabels]="proveedoresLabels"
+            [inputChartDataset]="productoDataSet" -->
+    </div>
+    <div class="col-md-6">
+        <app-grafica-barra 
+            [inputBarCharData]="proveedoresData">
+        </app-grafica-barra>
+    </div>
+</div>
+
