@@ -39,3 +39,9 @@ Este es un breve listado de los temas fundamentales:
 - Y más...
 
 Esta sección tiene por objetivo enseñarles a usar otra librería de terceros en Angular, para que comprendamos como mostrar de forma visual la data de nuestros componentes.
+
+## Tools
+
+- [ng2-charts](https://valor-software.com/ng2-charts/): Beautiful charts for Angular based on Chart.js
+- [Chart.js](https://www.chartjs.org/): Simple yet flexible JavaScript charting library for the modern web
+- [Adobe Color](https://color.adobe.com/es/create/color-wheel): La rueda de colores (o la imagen en la pestaña Extraer tema) se puede utilizar para crear una paleta de colores
